@@ -1,8 +1,29 @@
 # awesome
 
+https://flutter.dev/docs/development/ui/widgets
+
 A new Flutter application.
 
-## DemoBottomNavigationBar
+## DemoColumn
+
+## DemoRow
+
+## DemoStack
+
+## DemoGestures
+
+## DemoShowDialog
+
+## DemoModel
+模态
+
+## DemoPicker
+
+## DemoScrollView
+
+https://book.flutterchina.club/chapter6/scroll_controller.html
+
+## DemoAnimation
 
 ## DemoBottomNavigationBar
 ![DemoBottomNavigationBar](./img/DemoBottomNavigationBar.gif)

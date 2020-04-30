@@ -1,8 +1,16 @@
 import 'package:awesome/demo_bottom_navigation_bar.dart';
+import 'package:awesome/demo_bottom_sheet.dart';
+import 'package:awesome/demo_column.dart';
 import 'package:awesome/demo_custom_scroll_view.dart';
 import 'package:awesome/demo_expanded.dart';
+import 'package:awesome/demo_modal_bottom_sheet.dart';
+import 'package:awesome/demo_refresh_indicator.dart';
+import 'package:awesome/demo_row.dart';
+import 'package:awesome/demo_scroll_controller.dart';
+import 'package:awesome/demo_scroll_notification.dart';
 import 'package:awesome/demo_sliver_app_bar_advance.dart';
 import 'package:awesome/demo_sliver_app_bar_basic.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -19,6 +27,36 @@ class MyApp extends StatelessWidget {
   }
 }
 
+typedef onNextPage = void Function(String name);
+
+class ClickButton extends StatelessWidget {
+  final String text;
+  final Widget targetPage;
+
+  const ClickButton({Key key, @required this.text, @required this.targetPage})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return FlatButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) {
+              return targetPage;
+            },
+          ),
+        );
+      },
+      child: Text(
+        text,
+        style: TextStyle(color: Colors.lightBlue),
+      ),
+    );
+  }
+}
+
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
@@ -28,6 +66,17 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  void _gotoNextPage(BuildContext buildContext, Widget targetPage) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) {
+          return targetPage;
+        },
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,76 +85,55 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: ListView(
         children: <Widget>[
-          FlatButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) {
-                  return DemoBottomNavigationBar();
-                }),
-              );
-            },
-            child: Text(
-              "BottomNavigationBar",
-              style: TextStyle(color: Colors.lightBlue),
-            ),
+          CupertinoActivityIndicator(),
+          ClickButton(
+            text: "BottomNavigationBar",
+            targetPage: DemoBottomNavigationBar(),
           ),
-          FlatButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) {
-                  return DemoSliverAppBarBasic();
-                }),
-              );
-            },
-            child: Text(
-              "SliverAppBar Basic",
-              style: TextStyle(color: Colors.lightBlue),
-            ),
+          ClickButton(
+            text: "SliverAppBar Basic",
+            targetPage: DemoSliverAppBarBasic(),
           ),
-          FlatButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) {
-                  return DemoSliverAppBarAdvance();
-                }),
-              );
-            },
-            child: Text(
-              "SliverAppBar advance",
-              style: TextStyle(color: Colors.lightBlue),
-            ),
+          ClickButton(
+            text: "SliverAppBar advance",
+            targetPage: DemoSliverAppBarAdvance(),
           ),
-          FlatButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) {
-                  return DemoCustomScrollView();
-                }),
-              );
-            },
-            child: Text(
-              "CustomScrollView",
-              style: TextStyle(color: Colors.lightBlue),
-            ),
+          ClickButton(
+            text: "CustomScrollView",
+            targetPage: DemoCustomScrollView(),
           ),
-          FlatButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) {
-                  return DemoExpanded();
-                }),
-              );
-            },
-            child: Text(
-              "Expanded",
-              style: TextStyle(color: Colors.lightBlue),
-            ),
-          )
+          ClickButton(
+            text: "Expanded",
+            targetPage: DemoExpanded(),
+          ),
+          ClickButton(
+            text: "Scroll Controller",
+            targetPage: DemoScrollController(),
+          ),
+          ClickButton(
+            text: "Scroll Notification",
+            targetPage: DemoScrollNotification(),
+          ),
+          ClickButton(
+            text: "Column",
+            targetPage: DemoColumn(),
+          ),
+          ClickButton(
+            text: "Row",
+            targetPage: DemoRow(),
+          ),
+          ClickButton(
+            text: "Bottom Sheet",
+            targetPage: DemoBottomSheet(),
+          ),
+          ClickButton(
+            text: "Bottom Modal Sheet",
+            targetPage: DemoModalBottomSheet(),
+          ),
+          ClickButton(
+            text: "Refresh Indicator",
+            targetPage: DemoRefreshIndicator(),
+          ),
         ],
       ),
     );
