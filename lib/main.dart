@@ -1,7 +1,9 @@
 import 'package:awesome/demo_bottom_navigation_bar.dart';
 import 'package:awesome/demo_bottom_sheet.dart';
+import 'package:awesome/demo_button.dart';
 import 'package:awesome/demo_column.dart';
 import 'package:awesome/demo_custom_scroll_view.dart';
+import 'package:awesome/demo_drawer.dart';
 import 'package:awesome/demo_expanded.dart';
 import 'package:awesome/demo_modal_bottom_sheet.dart';
 import 'package:awesome/demo_refresh_indicator.dart';
@@ -85,7 +87,24 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: ListView(
         children: <Widget>[
-          CupertinoActivityIndicator(),
+//          https://medium.com/@aneesshameed/flutter-custom-painter-circles-4fbc68ae7c13
+//        https://medium.com/@aneesshameed/flutter-custom-painter-bc17fa70531b
+          ClickButton(
+            text: "Button",
+            targetPage: DemoButton(),
+          ),
+          ClickButton(
+            text: "Column",
+            targetPage: DemoColumn(),
+          ),
+          ClickButton(
+            text: "Row",
+            targetPage: DemoRow(),
+          ),
+          ClickButton(
+            text: "Drawer",
+            targetPage: DemoDrawer(),
+          ),
           ClickButton(
             text: "BottomNavigationBar",
             targetPage: DemoBottomNavigationBar(),
@@ -113,14 +132,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ClickButton(
             text: "Scroll Notification",
             targetPage: DemoScrollNotification(),
-          ),
-          ClickButton(
-            text: "Column",
-            targetPage: DemoColumn(),
-          ),
-          ClickButton(
-            text: "Row",
-            targetPage: DemoRow(),
           ),
           ClickButton(
             text: "Bottom Sheet",

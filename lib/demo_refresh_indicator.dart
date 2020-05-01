@@ -8,11 +8,6 @@ class DemoRefreshIndicator extends StatefulWidget {
 class _DemoRefreshIndicatorState extends State<DemoRefreshIndicator> {
   int _count = 10;
 
-  @override
-  void initState() {
-    super.initState();
-  }
-
   Future<void> _handleRefresh() async {
     await Future.delayed(Duration(seconds: 2));
 

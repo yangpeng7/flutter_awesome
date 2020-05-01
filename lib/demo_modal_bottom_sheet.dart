@@ -6,15 +6,6 @@ class DemoModalBottomSheet extends StatefulWidget {
 }
 
 class _DemoModalBottomSheetState extends State<DemoModalBottomSheet> {
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
