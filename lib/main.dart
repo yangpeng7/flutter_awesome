@@ -12,6 +12,7 @@ import 'package:awesome/demo_scroll_controller.dart';
 import 'package:awesome/demo_scroll_notification.dart';
 import 'package:awesome/demo_sliver_app_bar_advance.dart';
 import 'package:awesome/demo_sliver_app_bar_basic.dart';
+import 'package:awesome/state/demo_state_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -30,6 +31,31 @@ class MyApp extends StatelessWidget {
 }
 
 typedef onNextPage = void Function(String name);
+
+class Title extends StatelessWidget {
+  final String text;
+
+  const Title({Key key, this.text}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 40,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: Colors.red,
+        borderRadius: BorderRadius.all(
+          Radius.circular(25),
+        ),
+      ),
+      margin: EdgeInsets.symmetric(horizontal: 100, vertical: 10),
+      child: Text(
+        text,
+        style: TextStyle(color: Colors.white, fontSize: 18),
+      ),
+    );
+  }
+}
 
 class ClickButton extends StatelessWidget {
   final String text;
@@ -53,7 +79,10 @@ class ClickButton extends StatelessWidget {
       },
       child: Text(
         text,
-        style: TextStyle(color: Colors.lightBlue),
+        style: TextStyle(
+          color: Colors.lightBlue,
+          fontSize: 14,
+        ),
       ),
     );
   }
@@ -68,17 +97,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  void _gotoNextPage(BuildContext buildContext, Widget targetPage) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) {
-          return targetPage;
-        },
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,6 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
         children: <Widget>[
 //          https://medium.com/@aneesshameed/flutter-custom-painter-circles-4fbc68ae7c13
 //        https://medium.com/@aneesshameed/flutter-custom-painter-bc17fa70531b
+          Title(text: "UI基础"),
           ClickButton(
             text: "Button",
             targetPage: DemoButton(),
@@ -102,36 +121,8 @@ class _MyHomePageState extends State<MyHomePage> {
             targetPage: DemoRow(),
           ),
           ClickButton(
-            text: "Drawer",
-            targetPage: DemoDrawer(),
-          ),
-          ClickButton(
-            text: "BottomNavigationBar",
-            targetPage: DemoBottomNavigationBar(),
-          ),
-          ClickButton(
-            text: "SliverAppBar Basic",
-            targetPage: DemoSliverAppBarBasic(),
-          ),
-          ClickButton(
-            text: "SliverAppBar advance",
-            targetPage: DemoSliverAppBarAdvance(),
-          ),
-          ClickButton(
-            text: "CustomScrollView",
-            targetPage: DemoCustomScrollView(),
-          ),
-          ClickButton(
             text: "Expanded",
             targetPage: DemoExpanded(),
-          ),
-          ClickButton(
-            text: "Scroll Controller",
-            targetPage: DemoScrollController(),
-          ),
-          ClickButton(
-            text: "Scroll Notification",
-            targetPage: DemoScrollNotification(),
           ),
           ClickButton(
             text: "Bottom Sheet",
@@ -144,6 +135,41 @@ class _MyHomePageState extends State<MyHomePage> {
           ClickButton(
             text: "Refresh Indicator",
             targetPage: DemoRefreshIndicator(),
+          ),
+          ClickButton(
+            text: "BottomNavigationBar",
+            targetPage: DemoBottomNavigationBar(),
+          ),
+          ClickButton(
+            text: "Drawer",
+            targetPage: DemoDrawer(),
+          ),
+          Title(text: "UI进阶"),
+          ClickButton(
+            text: "SliverAppBar Basic",
+            targetPage: DemoSliverAppBarBasic(),
+          ),
+          ClickButton(
+            text: "SliverAppBar advance",
+            targetPage: DemoSliverAppBarAdvance(),
+          ),
+          ClickButton(
+            text: "CustomScrollView",
+            targetPage: DemoCustomScrollView(),
+          ),
+
+          ClickButton(
+            text: "Scroll Controller",
+            targetPage: DemoScrollController(),
+          ),
+          ClickButton(
+            text: "Scroll Notification",
+            targetPage: DemoScrollNotification(),
+          ),
+          Title(text: "状态管理"),
+          ClickButton(
+            text: "State Provider",
+            targetPage: DemoStateProvider(),
           ),
         ],
       ),
