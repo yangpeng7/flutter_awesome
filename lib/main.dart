@@ -6,12 +6,14 @@ import 'package:awesome/demo_custom_scroll_view.dart';
 import 'package:awesome/demo_drawer.dart';
 import 'package:awesome/demo_expanded.dart';
 import 'package:awesome/demo_modal_bottom_sheet.dart';
+import 'package:awesome/demo_offstage.dart';
 import 'package:awesome/demo_refresh_indicator.dart';
 import 'package:awesome/demo_row.dart';
 import 'package:awesome/demo_scroll_controller.dart';
 import 'package:awesome/demo_scroll_notification.dart';
 import 'package:awesome/demo_sliver_app_bar_advance.dart';
 import 'package:awesome/demo_sliver_app_bar_basic.dart';
+import 'package:awesome/demo_visibility.dart';
 import 'package:awesome/state/demo_state_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -123,6 +125,14 @@ class _MyHomePageState extends State<MyHomePage> {
           ClickButton(
             text: "Expanded",
             targetPage: DemoExpanded(),
+          ),
+          ClickButton(
+            text: "Visibility",
+            targetPage: DemoVisibility(),
+          ),
+          ClickButton(
+            text: "Offstage",
+            targetPage: DemoOffstage(),
           ),
           ClickButton(
             text: "Bottom Sheet",
