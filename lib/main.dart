@@ -8,11 +8,14 @@ import 'package:awesome/demo_expanded.dart';
 import 'package:awesome/demo_modal_bottom_sheet.dart';
 import 'package:awesome/demo_offstage.dart';
 import 'package:awesome/demo_refresh_indicator.dart';
+import 'package:awesome/demo_refresh_load_more.dart';
 import 'package:awesome/demo_row.dart';
+import 'package:awesome/demo_safe_area.dart';
 import 'package:awesome/demo_scroll_controller.dart';
 import 'package:awesome/demo_scroll_notification.dart';
 import 'package:awesome/demo_sliver_app_bar_advance.dart';
 import 'package:awesome/demo_sliver_app_bar_basic.dart';
+import 'package:awesome/demo_stack.dart';
 import 'package:awesome/demo_visibility.dart';
 import 'package:awesome/state/demo_state_provider.dart';
 import 'package:flutter/cupertino.dart';
@@ -53,7 +56,7 @@ class Title extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 100, vertical: 10),
       child: Text(
         text,
-        style: TextStyle(color: Colors.white, fontSize: 18),
+        style: TextStyle(color: Colors.white, fontSize: 20),
       ),
     );
   }
@@ -111,6 +114,10 @@ class _MyHomePageState extends State<MyHomePage> {
 //        https://medium.com/@aneesshameed/flutter-custom-painter-bc17fa70531b
           Title(text: "UI基础"),
           ClickButton(
+            text: "Refresh Load More",
+            targetPage: DemoRefreshLoadMore(),
+          ),
+          ClickButton(
             text: "Button",
             targetPage: DemoButton(),
           ),
@@ -125,6 +132,10 @@ class _MyHomePageState extends State<MyHomePage> {
           ClickButton(
             text: "Expanded",
             targetPage: DemoExpanded(),
+          ),
+          ClickButton(
+            text: "Stack",
+            targetPage: DemoStack(),
           ),
           ClickButton(
             text: "Visibility",
@@ -145,6 +156,10 @@ class _MyHomePageState extends State<MyHomePage> {
           ClickButton(
             text: "Refresh Indicator",
             targetPage: DemoRefreshIndicator(),
+          ),
+          ClickButton(
+            text: "SafeArea",
+            targetPage: DemoSafeArea(),
           ),
           ClickButton(
             text: "BottomNavigationBar",
