@@ -1,45 +1,64 @@
-# awesome
+# awesome flutter
 
-https://flutter.dev/docs/development/ui/widgets
+[Flutter Widget 分类](https://flutter.dev/docs/development/ui/widgets)
 
-A new Flutter application.
+## DemoButton
+![DemoButton](./img/DemoButton.gif)
 
 ## DemoColumn
+![DemoColumn](./img/DemoColumn.gif)
 
 ## DemoRow
+![DemoRow](./img/DemoRow.gif)
+
+## DemoExpanded
+![DemoExpanded](./img/DemoExpanded.gif)
 
 ## DemoStack
+![DemoStack](./img/DemoStack.gif)
 
-## DemoGestures
+## DemoVisibility
+![DemoVisibility](./img/DemoVisibility.gif)
 
-## DemoShowDialog
+## DemoOffstage
+![DemoOffstage](./img/DemoOffstage.gif)
 
-## DemoModel
-模态
+## DemoSafeArea
+![DemoSafeArea](./img/DemoSafeArea.gif)
 
-## DemoPicker
+## DemoBottomSheet
+![DemoBottomSheet](./img/DemoBottomSheet.gif)
 
-## DemoScrollView
+## DemoBottomModalSheet
+![DemoBottomModalSheet](./img/DemoBottomModalSheet.gif)
 
-https://book.flutterchina.club/chapter6/scroll_controller.html
-
-## DemoAnimation
+## DemoRefreshIndicator
+![DemoRefreshIndicator](./img/DemoRefreshIndicator.gif)
 
 ## DemoBottomNavigationBar
 ![DemoBottomNavigationBar](./img/DemoBottomNavigationBar.gif)
+
+## DemoDrawer
+![DemoDrawer](./img/DemoDrawer.gif)
 
 
 ## DemoSliverAppBarBasic
 ![DemoSliverAppBarBasic](./img/DemoSliverAppBarBasic.gif)
 
-
 ## DemoSliverAppBarAdvance
 ![DemoSliverAppBarAdvance](./img/DemoSliverAppBarAdvance.gif)
-
 
 ## DemoCustomScrollView
 ![DemoCustomScrollView](./img/DemoCustomScrollView.gif)
 
+## DemoScrollController
+![DemoScrollController](./img/DemoScrollController.gif)
 
-## DemoExpanded
-<img src="./img/DemoExpanded.png" alt="DemoExpanded" style="zoom:50%;" />
+## DemoScrollNotification
+![DemoScrollNotification](./img/DemoScrollNotification.gif)
+
+## DemoRefreshLoadMore
+![DemoRefreshLoadMore](./img/DemoRefreshLoadMore.gif)
+
+## DemoStateProvider
+![DemoStateProvider](./img/DemoStateProvider.gif)

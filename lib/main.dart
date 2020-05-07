@@ -86,7 +86,7 @@ class ClickButton extends StatelessWidget {
         text,
         style: TextStyle(
           color: Colors.lightBlue,
-          fontSize: 14,
+          fontSize: 18,
         ),
       ),
     );
@@ -113,10 +113,6 @@ class _MyHomePageState extends State<MyHomePage> {
 //          https://medium.com/@aneesshameed/flutter-custom-painter-circles-4fbc68ae7c13
 //        https://medium.com/@aneesshameed/flutter-custom-painter-bc17fa70531b
           Title(text: "UI基础"),
-          ClickButton(
-            text: "Refresh Load More",
-            targetPage: DemoRefreshLoadMore(),
-          ),
           ClickButton(
             text: "Button",
             targetPage: DemoButton(),
@@ -146,6 +142,10 @@ class _MyHomePageState extends State<MyHomePage> {
             targetPage: DemoOffstage(),
           ),
           ClickButton(
+            text: "SafeArea",
+            targetPage: DemoSafeArea(),
+          ),
+          ClickButton(
             text: "Bottom Sheet",
             targetPage: DemoBottomSheet(),
           ),
@@ -157,10 +157,7 @@ class _MyHomePageState extends State<MyHomePage> {
             text: "Refresh Indicator",
             targetPage: DemoRefreshIndicator(),
           ),
-          ClickButton(
-            text: "SafeArea",
-            targetPage: DemoSafeArea(),
-          ),
+
           ClickButton(
             text: "BottomNavigationBar",
             targetPage: DemoBottomNavigationBar(),
@@ -190,6 +187,10 @@ class _MyHomePageState extends State<MyHomePage> {
           ClickButton(
             text: "Scroll Notification",
             targetPage: DemoScrollNotification(),
+          ),
+          ClickButton(
+            text: "Refresh Load More",
+            targetPage: DemoRefreshLoadMore(),
           ),
           Title(text: "状态管理"),
           ClickButton(

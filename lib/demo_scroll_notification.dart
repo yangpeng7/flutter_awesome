@@ -28,7 +28,7 @@ class _DemoScrollNotificationState extends State<DemoScrollNotification> {
               onNotification: (notification) {
                 if (notification is ScrollStartNotification) {
                   setState(() {
-                    _scrollStatus = "Top !";
+                    _scrollStatus = "ScrollStart !";
                   });
                 } else if (notification is ScrollUpdateNotification) {
                   setState(() {
@@ -36,7 +36,7 @@ class _DemoScrollNotificationState extends State<DemoScrollNotification> {
                   });
                 } else if (notification is ScrollEndNotification) {
                   setState(() {
-                    _scrollStatus = "Bottom !";
+                    _scrollStatus = "ScrollEnd !";
                   });
                 }
 
