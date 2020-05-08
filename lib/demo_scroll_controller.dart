@@ -61,17 +61,18 @@ class _DemoScrollControllerState extends State<DemoScrollController> {
           ),
           Expanded(
             child: ListView.builder(
-                controller: _scrollController,
-                itemCount: 10,
-                itemBuilder: (context, index) {
-                  return Container(
-                    color: Colors.lightBlue[100 * (index % 10)],
-                    height: 100,
-                    child: Center(
-                      child: Text("item $index"),
-                    ),
-                  );
-                }),
+              controller: _scrollController,
+              itemCount: 10,
+              itemBuilder: (context, index) {
+                return Container(
+                  color: Colors.lightBlue[100 * (index % 10)],
+                  height: 100,
+                  child: Center(
+                    child: Text("item $index"),
+                  ),
+                );
+              },
+            ),
           )
         ],
       ),

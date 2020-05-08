@@ -18,6 +18,12 @@ IconButton:带 icon 的 Button
 
 ![DemoButton](./img/DemoButton.gif)
 
+## DemoClipRRect
+
+使用 ClipRRect 设置圆角。给 Container 设置 BoxDecoration 如果 child 是图片的话圆角是无效的，可以使用 ClipRRect 给图片或者复杂的 Widget 设置圆角。
+
+![DemoClipRRect](./img/DemoClipRRect.gif)
+
 ## DemoColumn
 
 列布局，继承自 Flex 可以对主轴和交叉轴进行设置来调整 Column 内的布局方式。
@@ -59,6 +65,12 @@ Expanded 必须方法 Flex 中，它会把 Flex 剩余的控件撑满，同时�
 安全区域，加上之后会自动适配 Android 或者 iOS 的刘海屏。
 
 ![DemoSafeArea](./img/DemoSafeArea.gif)
+
+## DemoPopMenuButton
+
+弹出选择 Widget，有时候并不能完全满足我们的需求。
+
+![DemoPopMenuButton](./img/DemoPopMenuButton.gif)
 
 ## DemoBottomSheet
 
@@ -126,8 +138,15 @@ SliverAppBar 和 TabBarView 一起使用
 
 ![DemoRefreshLoadMore](./img/DemoRefreshLoadMore.gif)
 
+## DemoCustomTimePicker
+
+自定义时间选择控件
+
+![DemoCustomTimePicker](./img/DemoCustomTimePicker.gif)
+
 ## DemoStateProvider
 
 使用 Provider 实现的状态管理
 
 ![DemoStateProvider](./img/DemoStateProvider.gif)
+

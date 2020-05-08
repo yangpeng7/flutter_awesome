@@ -1,12 +1,14 @@
 import 'package:awesome/demo_bottom_navigation_bar.dart';
 import 'package:awesome/demo_bottom_sheet.dart';
 import 'package:awesome/demo_button.dart';
+import 'package:awesome/demo_clip_rrect.dart';
 import 'package:awesome/demo_column.dart';
 import 'package:awesome/demo_custom_scroll_view.dart';
 import 'package:awesome/demo_drawer.dart';
 import 'package:awesome/demo_expanded.dart';
 import 'package:awesome/demo_modal_bottom_sheet.dart';
 import 'package:awesome/demo_offstage.dart';
+import 'package:awesome/demo_pop_menu_button.dart';
 import 'package:awesome/demo_refresh_indicator.dart';
 import 'package:awesome/demo_refresh_load_more.dart';
 import 'package:awesome/demo_row.dart';
@@ -20,6 +22,8 @@ import 'package:awesome/demo_visibility.dart';
 import 'package:awesome/state/demo_state_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'demo_custom_time_picker.dart';
 
 void main() => runApp(MyApp());
 
@@ -118,6 +122,10 @@ class _MyHomePageState extends State<MyHomePage> {
             targetPage: DemoButton(),
           ),
           ClickButton(
+            text: "ClipRRect",
+            targetPage: DemoClipRRect(),
+          ),
+          ClickButton(
             text: "Column",
             targetPage: DemoColumn(),
           ),
@@ -144,6 +152,10 @@ class _MyHomePageState extends State<MyHomePage> {
           ClickButton(
             text: "SafeArea",
             targetPage: DemoSafeArea(),
+          ),
+          ClickButton(
+            text: "PopupMenuButton",
+            targetPage: DemoPopupMenuButton(),
           ),
           ClickButton(
             text: "Bottom Sheet",
@@ -191,6 +203,11 @@ class _MyHomePageState extends State<MyHomePage> {
           ClickButton(
             text: "Refresh Load More",
             targetPage: DemoRefreshLoadMore(),
+          ),
+          Title(text: "自定义"),
+          ClickButton(
+            text: "Custom Time Picker",
+            targetPage: DemoCustomTimePicker(),
           ),
           Title(text: "状态管理"),
           ClickButton(
