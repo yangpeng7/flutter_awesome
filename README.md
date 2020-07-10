@@ -4,6 +4,12 @@
 
 Flutter 项目开发中常用的 Widget 一些基础功能，由于每个 Widget 都有很多的属性，这里只列出了基本也是最常用的属性，更多的用法可以看 Widget 中每个属性的注释。我会持续更新这个 demo 集合，同时后续会增加更多自定义的 Widget。
 
+## DemoContainer
+
+Flutter 中最常用的 Widget 之一，可以设置 margin，padding，decoration，等设置复杂效果。
+
+![DemoContainer](./img/DemoContainer.gif)
+
 ## DemoButton
 
 常用的几种 Button
@@ -102,6 +108,38 @@ Android 风格的下拉刷新
 
 ![DemoDrawer](./img/DemoDrawer.gif)
 
+## DemoClip
+
+Widget 裁剪。可以利用 
+
+ClipOval 裁剪出圆形、椭圆形
+
+ClipRRect 裁剪圆角矩形
+
+ClipRect 裁剪矩形
+
+ClipPath 自定义裁剪路径
+
+![DemoClip](./img/DemoClip.gif)
+
+## DemoBackdropFilter
+
+BackdropFilter 可以实现背景模糊
+
+![DemoBackdropFilter](./img/DemoBackdropFilter.gif)
+
+## DemoCustomPainter
+
+CustomPainter 可以自定义painter绘制点、线、圆、扇形、弧形或定义路径实现复杂形状
+
+![DemoCustomPainter](./img/DemoCustomPainter.gif)
+
+## DemoNavigationRail
+
+响应式导航
+
+![DemoNavigationRail](./img/DemoNavigationRail.gif)
+
 ## DemoSliverAppBarBasic
 
 SliverAppBar的基本使用
@@ -144,9 +182,16 @@ SliverAppBar 和 TabBarView 一起使用
 
 ![DemoCustomTimePicker](./img/DemoCustomTimePicker.gif)
 
+## DemoLifecycle
+
+StatefulWidget 生命周期 
+
+![DemoLifecycle](./img/DemoLifecycle.gif)
+
 ## DemoStateProvider
 
 使用 Provider 实现的状态管理
 
 ![DemoStateProvider](./img/DemoStateProvider.gif)
 
+## DemoInheritedWidget

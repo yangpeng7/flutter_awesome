@@ -11,7 +11,7 @@ class _DemoStackState extends State<DemoStack> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("九点下班"),
+        title: Text("Stack"),
       ),
       body: Stack(
         children: <Widget>[

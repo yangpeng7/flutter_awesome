@@ -1,11 +1,16 @@
+import 'package:awesome/demo_backdrop_filter.dart';
 import 'package:awesome/demo_bottom_navigation_bar.dart';
 import 'package:awesome/demo_bottom_sheet.dart';
 import 'package:awesome/demo_button.dart';
+import 'package:awesome/demo_clip.dart';
 import 'package:awesome/demo_clip_rrect.dart';
 import 'package:awesome/demo_column.dart';
+import 'package:awesome/demo_custom_painter.dart';
 import 'package:awesome/demo_custom_scroll_view.dart';
 import 'package:awesome/demo_drawer.dart';
 import 'package:awesome/demo_expanded.dart';
+import 'package:awesome/demo_inherited_widget.dart';
+import 'package:awesome/demo_lifecycle.dart';
 import 'package:awesome/demo_modal_bottom_sheet.dart';
 import 'package:awesome/demo_offstage.dart';
 import 'package:awesome/demo_pop_menu_button.dart';
@@ -23,7 +28,9 @@ import 'package:awesome/state/demo_state_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'demo_container.dart';
 import 'demo_custom_time_picker.dart';
+import 'demo_navigation_rail.dart';
 
 void main() => runApp(MyApp());
 
@@ -114,9 +121,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: ListView(
         children: <Widget>[
-//          https://medium.com/@aneesshameed/flutter-custom-painter-circles-4fbc68ae7c13
-//        https://medium.com/@aneesshameed/flutter-custom-painter-bc17fa70531b
           Title(text: "UI基础"),
+          ClickButton(
+            text: "Container",
+            targetPage: DemoContainer(),
+          ),
           ClickButton(
             text: "Button",
             targetPage: DemoButton(),
@@ -169,7 +178,6 @@ class _MyHomePageState extends State<MyHomePage> {
             text: "Refresh Indicator",
             targetPage: DemoRefreshIndicator(),
           ),
-
           ClickButton(
             text: "BottomNavigationBar",
             targetPage: DemoBottomNavigationBar(),
@@ -177,6 +185,22 @@ class _MyHomePageState extends State<MyHomePage> {
           ClickButton(
             text: "Drawer",
             targetPage: DemoDrawer(),
+          ),
+          ClickButton(
+            text: "Clip",
+            targetPage: DemoClip(),
+          ),
+          ClickButton(
+            text: "BackdropFilter",
+            targetPage: DemoBackdropFilter(),
+          ),
+          ClickButton(
+            text: "CustomPainter",
+            targetPage: DemoCustomPainter(),
+          ),
+          ClickButton(
+            text: "NavigationRail",
+            targetPage: DemoNavigationRail(),
           ),
           Title(text: "UI进阶"),
           ClickButton(
@@ -191,7 +215,6 @@ class _MyHomePageState extends State<MyHomePage> {
             text: "CustomScrollView",
             targetPage: DemoCustomScrollView(),
           ),
-
           ClickButton(
             text: "Scroll Controller",
             targetPage: DemoScrollController(),
@@ -211,8 +234,16 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           Title(text: "状态管理"),
           ClickButton(
+            text: "Lifecycle",
+            targetPage: DemoLifecycle(),
+          ),
+          ClickButton(
             text: "State Provider",
             targetPage: DemoStateProvider(),
+          ),
+          ClickButton(
+            text: "InheritedWidget",
+            targetPage: DemoInheritedWidget(),
           ),
         ],
       ),
